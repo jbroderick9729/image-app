@@ -1,4 +1,17 @@
-.image-grid {
+.grid {
     display: flex;
-    flex-direction: row;
+    flex-flow: row wrap;
+    justify-content: space-evenly
+}
+
+.grid-item {
+    display: flex;
+    flex-basis: 18%;
+    min-width: 10vh;
+    margin-bottom: 2%;
+    max-height: 20vh;
+}
+
+.grid-item:hover {
+    cursor: pointer;
 }
