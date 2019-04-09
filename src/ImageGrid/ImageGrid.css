@@ -12,6 +12,37 @@
     max-height: 20vh;
 }
 
-.grid-item:hover {
-    cursor: pointer;
+.hidden {
+    display: none;
+}
+
+.modal-open {
+    opacity: 0.2
+}
+
+.modal {
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    margin-left: -415px;
+    border: solid grey 2px;
+    background-color: white;
+    padding: 10px;
+    display: flex;
+    flex-direction: row
+}
+
+.modal-right {
+    margin-left: 10px
+}
+
+button {
+    margin: 10px
+}
+
+p {
+    font-size: 16px;
+    font-weight: bold;
+    max-width: 200px;
+    overflow-wrap: break-word;
 }
