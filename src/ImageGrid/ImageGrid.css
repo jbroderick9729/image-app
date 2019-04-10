@@ -1,50 +1,54 @@
 .grid {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-evenly;
-    margin-right: 5%;
-    margin-left: 5%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  margin-right: 20%;
+  margin-left: 20%;
 }
 
 .grid-item {
-    display: flex;
-    flex-basis: 18%;
-    min-width: 10vh;
-    margin-bottom: 2%;
-    max-height: 30vh;
+  margin-bottom: 2%;
 }
 
 .hidden {
-    display: none;
+  display: none;
 }
 
 .modal-open {
-    opacity: 0.2
+  opacity: 0.2;
 }
 
 .modal {
-    position: absolute;
-    top: 100px;
-    left: 50%;
-    margin-left: -415px;
-    border: solid grey 2px;
-    background-color: white;
-    padding: 10px;
-    display: flex;
-    flex-direction: row
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  margin-left: -415px;
+  border: solid grey 2px;
+  background-color: white;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
 }
 
 .modal-right {
-    margin-left: 10px
+  margin-left: 10px;
 }
 
 button {
-    margin: 10px
+  margin: 10px;
+  border-radius: 4px;
+  color: rgb(109, 13, 109);
+}
+
+.close-button {
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 p {
-    font-size: 16px;
-    font-weight: bold;
-    max-width: 200px;
-    overflow-wrap: break-word;
+  font-size: 16px;
+  font-weight: bold;
+  max-width: 200px;
+  overflow-wrap: break-word;
 }

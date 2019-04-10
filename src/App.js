@@ -21,7 +21,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
+        <header>
           <h1>Images App</h1>
         </header>
         <ImageGrid images={this.state.images} />

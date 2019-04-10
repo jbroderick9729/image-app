@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import "./ImageGrid.css";
 import DescriptionForm from "../DescriptionForm/DescriptionForm";
+import "./ImageGrid.css";
 
 export default class ImageGrid extends Component {
   static defaultProps = {
@@ -64,51 +64,43 @@ export default class ImageGrid extends Component {
 
     return (
       <main>
-        {/* grid items, opacity decreased when modal is open */}
         <div
           className={this.state.show === "false" ? "grid" : "grid modal-open"}
         >
           {gridItems}
         </div>
 
-        {/* modal - show when image is clicked */}
         <div className={this.state.show === "false" ? "hidden" : undefined}>
-        
-            <div className="modal" show={this.state.show}>
-              <img src={this.state.url} alt="placeholder" />
-              <div className="modal-right">
-                <button
-                  style={{
-                    position: "absolute",
-                    top: "0",
-                    right: "0"
-                  }}
-                  onClick={this.handleCloseModal}
-                >
-                  Close
-                </button>
-                <div>
-                  <h2>Title: </h2>
-                  <p>{this.state.title}</p>
-                </div>
-                <hr />
+          <div className="modal" show={this.state.show}>
+            <img src={this.state.url} alt="placeholder" />
+            <div className="modal-right">
+              <button
+                className="close-button"
+                onClick={this.handleCloseModal}
+              >
+                Close
+              </button>
+              <div>
+                <h2>Title: </h2>
+                <p>{this.state.title}</p>
+              </div>
+              <hr />
 
-                {/* show description if id's in localStorage, otherwise show form */}
-                {!window.localStorage.getItem(this.state.id) ? (
-                  <DescriptionForm
-                    handleSubmitDescription={this.handleSubmitDescription}
-                    handleEnterDescription={this.handleEnterDescription}
-                  />
-                ) : (
+              {!window.localStorage.getItem(this.state.id) ? (
+                <DescriptionForm
+                  handleSubmitDescription={this.handleSubmitDescription}
+                  handleEnterDescription={this.handleEnterDescription}
+                />
+              ) : (
                   <div>
                     <h2>Description: </h2>
                     <p>{window.localStorage.getItem(this.state.id)}</p>
                   </div>
                 )}
-              </div>
+
             </div>
           </div>
-      
+        </div>
       </main>
     );
   }
